@@ -9,7 +9,7 @@ innerWidth = 22;
 innerRadius = innerWidth/2;
 innerHoleWidth = 18;
 innerHoleRadius = innerHoleWidth/2;
-innerHeight = 7.6;
+innerHeight = 8;
 
 toothHeight = 2.4;
 toothWidth = 1.1;
@@ -26,7 +26,7 @@ difference() {
 	union() {
 		difference() {
 			translate([0, 0, baseHeight/2]) {
-				cylinder(h = baseHeight, r = baseRadius, center = true);
+				cylinder(h = baseHeight, r = baseRadius, center = true, $fn = 100);
 			}
 			translate ([0, 0, baseHeight - (baseTroughHeight/2)]) {
 				cylinder(h = baseTroughHeight+fiddle, r = baseTroughRadius, center = true);
